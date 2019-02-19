@@ -6,6 +6,15 @@ package requests;
 public class PersonsRequest
 {
     private String userID;
+    private String authToken;
+
+    public String getAuthToken() {
+        return authToken;
+    }
+
+    public void setAuthToke(String authToke) {
+        this.authToken = authToken;
+    }
 
     public String getUserID() {
         return userID;

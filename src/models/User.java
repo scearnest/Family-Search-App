@@ -10,6 +10,10 @@ public class User {
     private String lastName;
     private char gender;
 
+
+
+    private String ID;
+
     public User (String username, String password, String email, String firstName, String lastName, char gender)
     {
         this.username = username;
@@ -42,5 +46,29 @@ public class User {
 
     public char getGender() {
         return gender;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder str = new StringBuilder();
+        str.append("'" + username + "',");
+        str.append("'" + password + "',");
+        str.append("'" + email + "',");
+        str.append("'" + firstName + "',");
+        str.append("'" + lastName + "',");
+        str.append("'" + gender + "',");
+        str.append("'" + username + "',");
+        str.append("'" + ID + "'");
+
+        return str.toString();
     }
 }

@@ -1,5 +1,5 @@
 package service;
-import DOAs.RegisterDOA;
+import DOAs.UserDOA;
 import requests.RegisterRequest;
 import results.RegisterResult;
 import models.User;
@@ -9,7 +9,7 @@ import models.User;
  */
 public class RegisterService
 {
-    private RegisterDOA doa = new RegisterDOA();
+    private UserDOA doa;
     private RegisterRequest request;
     private RegisterResult result;
 
@@ -19,14 +19,12 @@ public class RegisterService
         this.request = request;
     }
 
-
     /**
-     * Runs the DOA class and returns the result
+     * Creates new user, generates 4 generations of ancestors, logs user in, and returns result
      * @return result: This is the result object for the command
      */
-    public RegisterResult runDOA()
+    public RegisterResult registerUser()
     {
-        doa.getUser(request.getUser());
-        return doa.sendToDB();
+        return result;
     }
-}
+}  

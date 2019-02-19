@@ -3,17 +3,17 @@ package models;
 /** Contains all the data for the Person data table */
 public class Person {
 
-    private int personID;
+    private String personID;
     private String descendant;
     private String firstName;
     private String lastName;
     private char gender;
-    private int father;
-    private int mother;
-    private int spouse;
+    private String father;
+    private String mother;
+    private String spouse;
 
 
-    public Person(int personID, String descendant, String firstName, String lastName, char gender, int father, int mother, int spouse) {
+    public Person(String personID, String descendant, String firstName, String lastName, char gender, String father, String mother, String spouse) {
         this.personID = personID;
         this.descendant = descendant;
         this.firstName = firstName;
@@ -25,7 +25,7 @@ public class Person {
     }
 
 
-    public int getPersonID() {
+    public String getPersonID() {
         return personID;
     }
 
@@ -45,16 +45,32 @@ public class Person {
         return gender;
     }
 
-    public int getFather() {
+    public String getFather() {
         return father;
     }
 
-    public int getMother() {
+    public String getMother() {
         return mother;
     }
 
-    public int getSpouse() {
+    public String getSpouse() {
         return spouse;
+    }
+
+    @Override
+    public String toString()
+    {
+        StringBuilder str = new StringBuilder();
+        str.append("'" + personID + "',");
+        str.append("'" + descendant + "',");
+        str.append("'" + firstName + "',");
+        str.append("'" + lastName + "',");
+        str.append("'" + gender + "',");
+        str.append("'" + father + "',");
+        str.append("'" + mother + "',");
+        str.append("'" + spouse + "'");
+
+        return str.toString();
     }
 }
 

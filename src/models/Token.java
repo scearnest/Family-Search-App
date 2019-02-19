@@ -4,9 +4,9 @@ package models;
 public class Token {
 
     private int token;
-    private int userID;
+    private String userID;
 
-    public Token(int token, int userID) {
+    public Token(int token, String userID) {
         this.token = token;
         this.userID = userID;
     }
@@ -15,8 +15,17 @@ public class Token {
         return token;
     }
 
-    public int getUserID() {
+    public String getUserID() {
         return userID;
     }
 
+    @Override
+    public String toString()
+    {
+        StringBuilder str = new StringBuilder();
+        str.append("'" + userID + "',");
+        str.append("'" + token + "'");
+
+        return str.toString();
+    }
 }

@@ -3,16 +3,16 @@ package results;
 /** Contains the message and data for the login result*/
 public class LoginResult
 {
-    private int token;
+    private String token;
     private String userName;
-    private int personID;
+    private String personID;
     private String errorMessage;
 
-    public int getToken() {
+    public String getToken() {
         return token;
     }
 
-    public void setToken(int token) {
+    public void setToken(String token) {
         this.token = token;
     }
 
@@ -24,11 +24,11 @@ public class LoginResult
         this.userName = userName;
     }
 
-    public int getPersonID() {
+    public String getPersonID() {
         return personID;
     }
 
-    public void setPersonID(int personID) {
+    public void setPersonID(String personID) {
         this.personID = personID;
     }
 

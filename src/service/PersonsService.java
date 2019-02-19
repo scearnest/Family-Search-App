@@ -1,27 +1,23 @@
 package service;
+import requests.PersonRequest;
 import requests.PersonsRequest;
+import results.PersonResult;
 import results.PersonsResults;
-import DOAs.PersonsDOA;
 
 /**
  * Manages the request and DOA process for the persons command. Returns the request
  */
 public class PersonsService
 {
-    private PersonsRequest request;
-    private PersonsDOA doa;
-
-    public void setRequest(PersonsRequest request) {
-        this.request = request;
-    }
-
     /**
-     * Runs the doa with the request for persons
+     * Uses DOA's to retrieve all family members for the specified user in the request
+     * @param authToken: this is the authorization token for the command
+     * @param request: this is the rest object for the command
      * @return result: contains the failure message or persons array for command
      */
-    public PersonsResults runDOA()
+    static public PersonsResults getPersons(String authToken, PersonRequest request)
     {
-        doa.setRequest(request);
-        return doa.getFromDB();
+        PersonsResults result = new PersonsResults();
+        return result;
     }
 }

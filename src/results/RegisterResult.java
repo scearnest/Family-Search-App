@@ -3,9 +3,9 @@ package results;
 /** Contains the message and data for the register result*/
 public class RegisterResult
 {
-    private int token;
+    private String token;
     private String userName;
-    private int personID;
+    private String personID;
     private String errorMessage;
     private boolean success;
 
@@ -17,11 +17,11 @@ public class RegisterResult
         this.success = success;
     }
 
-    public int getToken() {
+    public String getToken() {
         return token;
     }
 
-    public void setToken(int token) {
+    public void setToken(String token) {
         this.token = token;
     }
 
@@ -33,11 +33,11 @@ public class RegisterResult
         this.userName = userName;
     }
 
-    public int getPersonID() {
+    public String getPersonID() {
         return personID;
     }
 
-    public void setPersonID(int personID) {
+    public void setPersonID(String personID) {
         this.personID = personID;
     }
 
