@@ -1,5 +1,4 @@
 package service;
-import DOAs.EventsDOA;
 import requests.EventsRequest;
 import results.EventsResult;
 
@@ -8,20 +7,16 @@ import results.EventsResult;
  */
 public class EventsService
 {
-    EventsRequest request;
-    EventsDOA doa;
-
-    public void setRequest(EventsRequest request) {
-        this.request = request;
-    }
-
     /**
-     * Runs the doa with the request for events
+     * Uses DOA's to retrieve all events for the user specified in the request
+     * @param authToken: this is the authorization token for the command
+     * @param request: this is the rest object for the command
      * @return result: contains the failure message or event array for command
      */
-    public EventsResult runDOA()
+
+    public EventsResult getEvents(String authToken, EventsRequest request)
     {
-        doa.setRequest(request);
-        return  doa.getFromDB();
+        EventsResult result = new EventsResult();
+        return  result;
     }
 }

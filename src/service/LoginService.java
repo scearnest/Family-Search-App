@@ -1,7 +1,7 @@
 package service;
 import requests.LoginRequest;
 import results.LoginResult;
-import DOAs.LoginDOA;
+import DOAs.UserDOA;
 import models.User;
 
 /**
@@ -10,7 +10,8 @@ import models.User;
 public class LoginService
 {
     private LoginRequest request;
-    private LoginDOA doa;
+    private UserDOA doa;
+    private LoginResult result;
 
 
     public void setRequest(LoginRequest request)
@@ -19,12 +20,11 @@ public class LoginService
     }
 
     /**
-     * Runs the DOA class with the user object
+     * Logs in the user and returns the result
      * @return result: This is the return object for the command
      */
-    public LoginResult runDOA()
+    public LoginResult loginUser()
     {
-        doa.setRequest(request);
-        return doa.sendToDB();
+        return result;
     }
 }

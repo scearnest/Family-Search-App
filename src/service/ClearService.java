@@ -1,22 +1,23 @@
 package service;
 import results.ClearResult;
-import DOAs.ClearDOA;
+import DOAs.*;
 
 /**
  * Manages the request process for the clear command. Returns the request
  */
 public class ClearService
 {
-    private ClearDOA doa = new ClearDOA();
+    private ClearResult result;
+
 
 
     /**
-     * Runs the clear function for the DOA
+     * Deletes all data from the database
      * @return result: This is the result object for the clear command
      */
-    public ClearResult runDOA()
+    public ClearResult clear()
     {
-        return doa.clear();
+        return result;
     }
 
 }

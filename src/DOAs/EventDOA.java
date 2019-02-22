@@ -1,26 +1,48 @@
 package DOAs;
-import results.EventResult;
-import requests.EventRequest;
+import models.Event;
 
 /**
- * This class interacts with the database to preform the event command
+ * This class handles all the interactions with the events table in the database
  */
 public class EventDOA
 {
-    private EventRequest request;
-    private EventResult result;
+    Event event;
 
-    public void setRequest(EventRequest request) {
-        this.request = request;
+    public EventDOA()
+    {
     }
 
     /**
-     * Uses request to interact with the database and returns the event
-     * @return result: Contains the data for the result of the event command
+     * This function inserts the Event into the database
+     * @param event object containing Event data
+     * @return true of false for the success of operation
      */
-    public EventResult getFromDB()
+    public boolean insert(Event event)
     {
-        return result;
+        boolean success = false;
+        return success;
+    }
+
+    /**
+     * This function deletes the requested Event from the database
+     * @param event object containing Event data
+     * @return true of false for the success of operation
+     */
+    public boolean delete(Event event)
+    {
+        boolean success = false;
+        return success;
+    }
+
+
+    /**
+     * This function finds the Event based on their ID
+     * @param EventID ID for requested Event
+     * @return object containing the Events data
+     */
+    public Event find(String EventID)
+    {
+        return event;
     }
 
 }

@@ -1,27 +1,47 @@
 package DOAs;
-import requests.PersonRequest;
-import results.PersonResult;
+import models.Person;
 
 /**
- * Manages the request to database process for person command
+ * This class handles all the interactions with the persons table in the database
  */
 public class PersonDOA
 {
-    private PersonRequest request;
-    private PersonResult result;
+    Person person;
 
-    public void setRequest(PersonRequest request) {
-        this.request = request;
+    public PersonDOA()
+    {
     }
 
     /**
-     * This function interacts with the database to get the requested person
-     * @return result: This object contains the person object
+     * This function inserts the Person into the database
+     * @param person object containing Person data
+     * @return true of false for the success of operation
      */
-    public PersonResult getFromDB()
+    public boolean insert(Person person)
     {
-        return result;
+        boolean success = false;
+        return success;
+    }
+
+    /**
+     * This function deletes the requested Person from the database
+     * @param person object containing Person data
+     * @return true of false for the success of operation
+     */
+    public boolean delete(Person person)
+    {
+        boolean success = false;
+        return success;
     }
 
 
+    /**
+     * This function finds the Person based on their ID
+     * @param PersonID ID for requested Person
+     * @return object containing the Persons data
+     */
+    public Person find(String PersonID)
+    {
+        return person;
+    }
 }

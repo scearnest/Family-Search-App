@@ -1,7 +1,6 @@
 package service;
 import requests.FillRequest;
 import results.FillResult;
-import DOAs.FillDOA;
 
 /**
  * Manages the request and DOA process for the fill command. Returns the request
@@ -9,20 +8,19 @@ import DOAs.FillDOA;
 public class FillService
 {
     private FillRequest request;
-    private FillDOA doa = new FillDOA();
+    private FillResult result;
 
     public void setRequest(FillRequest request) {
         this.request = request;
     }
 
     /**
-     * Runs the fill function on the DOA with the request
+     * Fills the database for the request's user and number of generations
      * @return result: returns the result object for the fill command
      */
-    public FillResult runDOA()
+    public FillResult fill()
     {
-        doa.setRequest(request);
-        return doa.fill();
+        return result;
     }
 
 }
