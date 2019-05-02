@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:id="@+id/spouseLines"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="234dp">
+
+            <TextView
+                android:id="@+id/spouse_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spouse Lines"
+                android:textSize="24sp" />
+
+            <Switch
+                android:id="@+id/spouse_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="show spouse lines" />
+
+            <Spinner
+                android:id="@+id/spouseColor"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:entries="@array/colors_array"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lifeStoryLines"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="119dp">
+
+            <TextView
+                android:id="@+id/family_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Family Tree Lines"
+                android:textSize="24sp" />
+
+            <Switch
+                android:id="@+id/family_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="show family tree lines" />
+
+            <Spinner
+                android:id="@+id/familyTreeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:entries="@array/colors_array" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/familyTreeLines"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/life_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Life Story Lines"
+                android:textSize="24sp" />
+
+            <Switch
+                android:id="@+id/life_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="show life story lines" />
+
+            <Spinner
+                android:id="@+id/lifeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:entries="@array/colors_array" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mapType"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/map_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Map Type"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/mapSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:entries="@array/map_types" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginBottom="30dp"
+        android:text="Log Out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/resync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:layout_marginBottom="30dp"
+        android:text="Re-sync"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toEndOf="@+id/logOutButton" />
+
+</android.support.constraint.ConstraintLayout>
